@@ -73,20 +73,20 @@ let chocoBarPrice = prompt("How much does a chocolate bar cost?");
 let chocoBarAvailable = Math.floor(userWallet / chocoBarPrice);
 let change = userWallet % chocoBarPrice;
 
-if (userWallet == chocoBarPrice) {
+if (userWallet === chocoBarPrice) {
   console.log("You can buy 1 chocolate bar. Your don't have a change.");
-}
-
-if (userWallet < chocoBarPrice) {
-  console.log("You don't have enough money!");
 } else {
-  console.log(
-    "You can buy " +
-      chocoBarAvailable +
-      " chocolate bars. Your change is " +
-      change.toFixed(2) +
-      "."
-  );
+  if (userWallet < chocoBarPrice) {
+    console.log("You don't have enough money!");
+  } else {
+    console.log(
+      "You can buy " +
+        chocoBarAvailable +
+        " chocolate bars. Your change is " +
+        change.toFixed(2) +
+        "."
+    );
+  }
 }
 
 /* 9. The user types in a sum of bank deposits for 2 months with a yearly interest rate of 5%.
