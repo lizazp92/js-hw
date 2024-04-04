@@ -173,7 +173,7 @@ console.log(
   )}`
 );
 
-// 12. Declare a variable without initializing it and check if it is of type null or undefined.
+// 11. Declare a variable without initializing it and check if it is of type null or undefined.
 
 let a;
 if (typeof a === "undefined") {
@@ -184,7 +184,7 @@ if (typeof a === "undefined") {
   console.log("The value is neither undefined nor null");
 }
 
-// 13. Request a number, check if it is a number and if it is between 10 and 50
+// 12. Request a number, check if it is a number and if it is between 10 and 50
 
 let userNumberRequest = prompt("Please type in a number");
 if (isNaN(+userNumberRequest)) {
