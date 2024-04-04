@@ -105,3 +105,90 @@ let date1 = new Date(year, month - 1, date);
 console.log(`Your initial date is ${date1.toLocaleString()}`);
 date1.setDate(date1.getDate() + 1);
 console.log(`The next date is ${date1.toLocaleString()}`);
+
+// 6. Request a username and show a greeting using string template.
+
+let userName = prompt("Please type in your username");
+console.log(`Hello, ${userName}`);
+
+/* 7. Request names and ages for two children. 
+Check if child 1 is older and if its name is Tim. */
+
+let nameChild1 = prompt("Please type in 1st child's name");
+let ageChild1 = prompt("Please type in 1st child's age");
+let nameChild2 = prompt("Please type in 2nd child's name");
+let ageChild2 = prompt("Please type in 2nd child's age");
+
+if (nameChild1 == "Tim" && ageChild1 > ageChild2) {
+  console.log(
+    `1st child's name is ${nameChild1} and he is older than ${nameChild2}`
+  );
+} else {
+  console.log(`The checking did not pass.`);
+}
+
+// 8. Request a color and check if the color is on the flag of the Republic of South Africa.
+
+let userColor = prompt(
+  "Please type in a color and I will tell if the color is on the flag of the Republic of South Africa"
+);
+if (
+  userColor == "yellow" ||
+  userColor == "white" ||
+  userColor == "green" ||
+  userColor == "red" ||
+  userColor == "blue" ||
+  userColor == "black"
+) {
+  console.log(
+    `Yes, ${userColor} color is on the flag of the Republic of South Africa.`
+  );
+} else {
+  console.log(
+    `No, ${userColor} color is not on the flag of the Republic of South Africa.`
+  );
+}
+
+// 9. Request a number and check if it is an odd number.
+
+let userNumber = prompt(
+  "Please type in a number and I will check if it is an odd number."
+);
+if (userNumber == 0 || isNaN(+userNumber)) {
+  console.log(`Invalid number`);
+} else if (userNumber % 2 != 0) {
+  console.log(`${userNumber} is odd.`);
+} else {
+  console.log(`${userNumber} is even.`);
+}
+
+// 10. Request two numbers, divide them and the result must be an integer(whole number).
+
+let userNumber1 = prompt("Please type in the 1st number.");
+let userNumber2 = prompt("Please type in the 2nd number.");
+let numberDivision = userNumber1 / userNumber2;
+console.log(
+  `I divided them and this is the result (whole number): ${parseInt(
+    numberDivision
+  )}`
+);
+
+// 12. Declare a variable without initializing it and check if it is of type null or undefined.
+
+let a;
+if (typeof a === "undefined") {
+  console.log("The value is undefined");
+} else if (a === null) {
+  console.log("The value is null");
+} else {
+  console.log("The value is neither undefined nor null");
+}
+
+// 13. Request a number, check if it is a number and if it is between 10 and 50
+
+let userNumberRequest = prompt("Please type in a number");
+if (isNaN(+userNumberRequest)) {
+  console.log(`it is not a number.`);
+} else if (userNumberRequest >= 10 && userNumberRequest <= 50) {
+  console.log(`${userNumberRequest} is a number and it is between 10 and 50.`);
+}
