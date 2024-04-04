@@ -101,7 +101,7 @@ let month = myArray[1];
 let year = `20${myArray[2]}`;
 
 let date1 = new Date(year, month - 1, date);
-console.log(year, month, date);
+
 console.log(`Your initial date is ${date1.toLocaleString()}`);
 date1.setDate(date1.getDate() + 1);
 console.log(`The next date is ${date1.toLocaleString()}`);
