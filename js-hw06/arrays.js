@@ -76,8 +76,8 @@ const shopReceipt = [
 
 function receiptSum() {
   let sum = 0;
-  for (i = 0; i < shopReceipt.length; i++) {
-    sum += shopReceipt[i].ammount * shopReceipt[i].pricePerItem;
+  for (let product in shopReceipt) {
+    sum += shopReceipt[product].ammount * shopReceipt[product].pricePerItem;
   }
   return sum;
 }
