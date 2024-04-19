@@ -1,0 +1,10 @@
+.underaged,
+.welcome {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: rgb(69, 0, 0);
+  background-color: blueviolet;
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+}
