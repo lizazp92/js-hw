@@ -28,10 +28,14 @@ if (age < 18) {
   main.append(newStr3);
 
   const menuList = document.createElement("ul");
+  menuList.classList.add("list");
   main.append(menuList);
   menu.forEach((drink, index) => {
     const listItem = document.createElement("li");
-    listItem.innerText = `${index + 1}. ${drink.name} - ${drink.price} UAH.`;
+    listItem.innerText = `${index + 1}. ${drink.name} - ${drink.price} UAH`;
+    if (index % 2 === 0) {
+      listItem.classList.add("list__styling");
+    }
     menuList.append(listItem);
   });
 }
