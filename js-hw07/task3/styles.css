@@ -1,0 +1,12 @@
+* {
+  font-size: 1.5rem;
+}
+
+ol li::after {
+  content: ";";
+}
+ol li:last-of-type:after {
+  content: ".";
+}
+
+/*# sourceMappingURL=styles.css.map */
