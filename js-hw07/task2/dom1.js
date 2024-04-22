@@ -31,7 +31,12 @@ names.push("Larry");
 names.splice(names.indexOf("Mel"), 1);
 
 //Add a row that says that Mel has been removed from the list
-names.push("Mel has been removed from the list");
+var index = names.indexOf("Mel");
+if (index !== -1) {
+  names[index] = "Mel has been removed from the list";
+}
+// or
+names.splice(6, 1, "Mel has been removed from the list");
 
 names.forEach((name) => {
   const listItem = document.createElement("li");
