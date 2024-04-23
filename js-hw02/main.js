@@ -108,18 +108,33 @@ console.log(`The next date is ${date1.toLocaleString()}`);
 
 // 6. Request a username and show a greeting using string template.
 
-let userName = prompt("Please type in your username");
-console.log(`Hello, ${userName}`);
+let userInputName = prompt("Please type in your username");
+userName = userInputName[0].toUpperCase() + userInputName.slice(1);
+console.log(`Hello, ${userName.trim()}`);
 
 /* 7. Request names and ages for two children. 
 Check if child 1 is older and if its name is Tim. */
 
-let nameChild1 = prompt("Please type in 1st child's name");
-let ageChild1 = prompt("Please type in 1st child's age");
-let nameChild2 = prompt("Please type in 2nd child's name");
-let ageChild2 = prompt("Please type in 2nd child's age");
+const userInputChild1 = prompt("Please type in 1st child's name");
+const ageChild1 = prompt("Please type in 1st child's age");
+const userInputChild2 = prompt("Please type in 2nd child's name");
+const ageChild2 = prompt("Please type in 2nd child's age");
 
-if (nameChild1 == "Tim" && ageChild1 > ageChild2) {
+const nameChild1 = (
+  userInputChild1[0].toUpperCase() + userInputChild1.slice(1)
+).trim();
+const nameChild2 = (
+  userInputChild2[0].toUpperCase() + userInputChild2.slice(1)
+).trim();
+
+if (
+  isNaN(+ageChild1) ||
+  isNaN(+ageChild2) ||
+  ageChild1 >= 18 ||
+  ageChild2 >= 18
+) {
+  console.log(`Invalid input.`);
+} else if (nameChild1 === "Tim" && ageChild1 > ageChild2) {
   console.log(
     `1st child's name is ${nameChild1} and he is older than ${nameChild2}`
   );
@@ -129,23 +144,25 @@ if (nameChild1 == "Tim" && ageChild1 > ageChild2) {
 
 // 8. Request a color and check if the color is on the flag of the Republic of South Africa.
 
-let userColor = prompt(
+const userInput = prompt(
   "Please type in a color and I will tell if the color is on the flag of the Republic of South Africa"
 );
+
+const userColor = userInput.toLowerCase.trim();
 if (
-  userColor == "yellow" ||
-  userColor == "white" ||
-  userColor == "green" ||
-  userColor == "red" ||
-  userColor == "blue" ||
-  userColor == "black"
+  userColor === "yellow" ||
+  userColor === "white" ||
+  userColor === "green" ||
+  userColor === "red" ||
+  userColor === "blue" ||
+  userColor === "black"
 ) {
   console.log(
-    `Yes, ${userColor} color is on the flag of the Republic of South Africa.`
+    `Yes, ${userInput.trim()} color is on the flag of the Republic of South Africa.`
   );
 } else {
   console.log(
-    `No, ${userColor} color is not on the flag of the Republic of South Africa.`
+    `No, ${userInput.trim()} color is not on the flag of the Republic of South Africa.`
   );
 }
 
