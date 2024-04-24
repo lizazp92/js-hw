@@ -1,7 +1,7 @@
 /* 1. Request a three-digit number from a user 
 and check whether it has identical digits in it. */
 
-let number = prompt(
+const number = prompt(
   "Please type in a three-digit number and I will check whether it has identical digits in it."
 );
 if (number.length != 3 || isNaN(+number)) {
@@ -23,7 +23,7 @@ if (number.length != 3 || isNaN(+number)) {
 
 // 2. Request a five-unit number from a user and check whether it is a palindrome.
 
-let fiveUnitNumber = prompt(
+const fiveUnitNumber = prompt(
   "Please type in a five-unit number and I will check if it is a palindrome."
 );
 if (isNaN(+fiveUnitNumber) || fiveUnitNumber.length != 5) {
@@ -40,10 +40,10 @@ if (isNaN(+fiveUnitNumber) || fiveUnitNumber.length != 5) {
 /* 3. Execute a currency converter. 
 A user puts in USD, chooses a currency (EUR, SEK, AUD etc.) and gets the result. */
 
-let usdAmmount = prompt(
+const usdAmmount = prompt(
   "This is a converter from USD to EUR/SEK/AUD. Please specify the ammount in USD"
 );
-let chooseCurrency = prompt("Choose a currency: EUR/SEK/AUD");
+const chooseCurrency = prompt("Choose a currency: EUR/SEK/AUD");
 const exchangeRateEur = 0.93;
 const exchangeRateSek = 10.65;
 const exchangeRateAud = 1.52;
@@ -71,8 +71,10 @@ if (isNaN(usdAmmount) || usdAmmount.length == 0 || chooseCurrency.length == 0) {
 /* 4. Request a length of a circumference and a perimeter of a square from a user. 
 Define whether that circumference can fit in that square. */
 
-let lengthCircum = prompt("Please specify a length of a circumference in cm.");
-let squarePerim = prompt("Please specify a perimeter of a square in cm.");
+const lengthCircum = prompt(
+  "Please specify a length of a circumference in cm."
+);
+const squarePerim = prompt("Please specify a perimeter of a square in cm.");
 
 const sideLength = squarePerim / 4;
 const pi = 3.14;
@@ -93,14 +95,13 @@ if (
 /* 5. Request a date (dd:mm:yy) and put out the one that goes after it. 
 Pay attention to the start of a new month, new year, and also leap years. */
 
-let userDate = prompt("Please specify a date (dd:mm:yy)");
-
+const userDate = prompt("Please specify a date (dd:mm:yy)");
 const myArray = userDate.split(":");
-let date = myArray[0];
-let month = myArray[1];
-let year = `20${myArray[2]}`;
+const date = myArray[0];
+const month = myArray[1];
+const year = `20${myArray[2]}`;
 
-let date1 = new Date(year, month - 1, date);
+const date1 = new Date(year, month - 1, date);
 
 console.log(`Your initial date is ${date1.toLocaleString()}`);
 date1.setDate(date1.getDate() + 1);
@@ -108,9 +109,14 @@ console.log(`The next date is ${date1.toLocaleString()}`);
 
 // 6. Request a username and show a greeting using string template.
 
-let userInputName = prompt("Please type in your username");
-userName = userInputName[0].toUpperCase() + userInputName.slice(1);
-console.log(`Hello, ${userName.trim()}`);
+const userInputName = prompt("Please type in your username");
+if (!isNaN(userInputName) || userInputName === "") {
+  console.log("Invalid input.");
+} else {
+  userName =
+    userInputName.trim()[0].toUpperCase() + userInputName.trim().slice(1);
+  console.log(`Hello, ${userName}`);
+}
 
 /* 7. Request names and ages for two children. 
 Check if child 1 is older and if its name is Tim. */
@@ -168,10 +174,10 @@ if (
 
 // 9. Request a number and check if it is an odd number.
 
-let userNumber = prompt(
+const userNumber = prompt(
   "Please type in a number and I will check if it is an odd number."
 );
-if (userNumber == 0 || isNaN(+userNumber)) {
+if (userNumber === 0 || isNaN(+userNumber)) {
   console.log(`Invalid number`);
 } else if (userNumber % 2 != 0) {
   console.log(`${userNumber} is odd.`);
@@ -181,9 +187,9 @@ if (userNumber == 0 || isNaN(+userNumber)) {
 
 // 10. Request two numbers, divide them and the result must be an integer(whole number).
 
-let userNumber1 = prompt("Please type in the 1st number.");
-let userNumber2 = prompt("Please type in the 2nd number.");
-let numberDivision = userNumber1 / userNumber2;
+const userNumber1 = prompt("Please type in the 1st number.");
+const userNumber2 = prompt("Please type in the 2nd number.");
+const numberDivision = userNumber1 / userNumber2;
 console.log(
   `I divided them and this is the result (whole number): ${parseInt(
     numberDivision
@@ -203,7 +209,7 @@ if (typeof a === "undefined") {
 
 // 12. Request a number, check if it is a number and if it is between 10 and 50
 
-let userNumberRequest = prompt("Please type in a number");
+const userNumberRequest = prompt("Please type in a number");
 if (isNaN(+userNumberRequest)) {
   console.log(`it is not a number.`);
 } else if (userNumberRequest >= 10 && userNumberRequest <= 50) {
