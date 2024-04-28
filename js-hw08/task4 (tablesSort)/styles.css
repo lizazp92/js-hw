@@ -1,0 +1,14 @@
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.header {
+  font-weight: 800;
+  cursor: pointer;
+  background-color: aqua;
+}
