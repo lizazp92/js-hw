@@ -1,0 +1,13 @@
+body {
+  padding: 1rem 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.info {
+  color: green;
+  padding: 1rem 2rem;
+}
+
+div,
+textarea {
+  font-size: 1.5rem;
+}
