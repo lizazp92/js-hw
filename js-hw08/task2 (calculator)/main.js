@@ -13,10 +13,18 @@ const decimal = document.getElementById("decimal");
 
 // once a number btn is clicked, it's displayed in the output.
 //initial 0 is replaced with ""
+//if the 1st number is 0, another number can be added after math operator
 for (let i = 0; i < number.length; i++) {
   number[i].addEventListener("click", function (event) {
-    input.innerHTML =
-      input.innerHTML.replace(/^0+/, "") + event.target.innerHTML;
+    if (
+      input.innerHTML[0] == 0 &&
+      (actionSign.length === 1 || decimalCount === 1)
+    ) {
+      input.innerHTML += event.target.innerHTML;
+    } else {
+      input.innerHTML =
+        input.innerHTML.replace(/^0+/, "") + event.target.innerHTML;
+    }
   });
 }
 
@@ -36,7 +44,7 @@ for (let i = 0; i < operators.length; i++) {
 // adding decimals
 let decimalCount = 0;
 decimal.addEventListener("click", () => {
-  if (decimalCount == 0) {
+  if (decimalCount === 0) {
     input.innerHTML += ".";
     decimalCount++;
   } else if (decimalCount == 1 && actionSign.length == 1) {
