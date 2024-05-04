@@ -2,11 +2,11 @@
 // of the page after a button has been clicked
 
 $(() => {
-  jQuery("<div>", {
+  $("<div>", {
     class: "rectangle",
   }).appendTo("main");
 
-  jQuery("<button>", {
+  $("<button>", {
     class: "btn btn-success",
     text: "Move a rectangle",
   }).insertAfter(".rectangle");
