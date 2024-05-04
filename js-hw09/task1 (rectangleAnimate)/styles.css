@@ -1,0 +1,11 @@
+.rectangle {
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.btn {
+  margin-left: 2rem;
+}
