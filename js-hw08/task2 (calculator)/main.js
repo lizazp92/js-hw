@@ -70,8 +70,13 @@ result.addEventListener("click", () => {
     case "*":
       tempResult = x * y;
       break;
-    case "/":
-      tempResult = x / y;
+    case "÷":
+      if (y === 0) {
+        alert(`Pls stop`);
+        tempResult = 0;
+      } else {
+        tempResult = x / y;
+      }
       break;
   }
   input.innerHTML = tempResult;
