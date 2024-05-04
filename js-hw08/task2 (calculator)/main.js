@@ -44,10 +44,7 @@ for (let i = 0; i < operators.length; i++) {
 // adding decimals
 let decimalCount = 0;
 decimal.addEventListener("click", () => {
-  if (decimalCount === 0) {
-    input.innerHTML += ".";
-    decimalCount++;
-  } else if (decimalCount == 1 && actionSign.length == 1) {
+  if (decimalCount === 0 || (decimalCount == 1 && actionSign.length == 1)) {
     input.innerHTML += ".";
     decimalCount++;
   }
@@ -56,9 +53,7 @@ decimal.addEventListener("click", () => {
 // splitting 2 numbers by operator and showing result
 result.addEventListener("click", () => {
   let x = parseFloat(input.textContent.split(actionSign)[0]);
-  console.log(x);
   let y = parseFloat(input.textContent.split(actionSign)[1]);
-  console.log(y);
   let tempResult = 0;
   switch (actionSign) {
     case "+":
@@ -79,7 +74,7 @@ result.addEventListener("click", () => {
       }
       break;
   }
-  input.innerHTML = tempResult;
+  input.innerHTML = tempResult.toFixed(10);
   //math operators storage is cleared.
   //if the result has a decimal, we set out decimal count to 1
   //or set it to 0 if the result has no decimals
