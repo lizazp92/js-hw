@@ -1,4 +1,4 @@
-body {
+main {
   height: 10rem;
   display: grid;
   justify-content: center;
@@ -47,7 +47,7 @@ body {
 }
 .calculator__key--enter {
   grid-column: 4/5;
-  grid-row: 2/span 4;
+  grid-row: 2 / span 4;
   background-color: #df7057;
 }
 .calculator__key--enter:hover {
