@@ -17,7 +17,7 @@ if (age < 18) {
   newStr.innerText = "You are underaged!";
   newStr.setAttribute("class", "underaged");
   header.append(newStr);
-} else if (age > 18) {
+} else if (age >= 18) {
   const newStr2 = document.createElement("h1");
   newStr2.innerText = "Welcome to our bar!";
   newStr2.setAttribute("class", "welcome");

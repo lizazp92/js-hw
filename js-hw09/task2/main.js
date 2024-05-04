@@ -58,7 +58,7 @@ $(() => {
         }
         break;
     }
-    input.html(tempResult);
+    input.html(parseFloat(tempResult.toFixed(10)));
 
     //math operators storage is cleared.
     //if the result has a decimal, we set out decimal count to 1

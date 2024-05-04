@@ -74,7 +74,7 @@ result.addEventListener("click", () => {
       }
       break;
   }
-  input.innerHTML = tempResult.toFixed(10);
+  input.innerHTML = parseFloat(tempResult.toFixed(10));
   //math operators storage is cleared.
   //if the result has a decimal, we set out decimal count to 1
   //or set it to 0 if the result has no decimals
