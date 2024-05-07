@@ -1,0 +1,19 @@
+h1,
+h2 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+ul {
+  width: 40%;
+  margin: auto;
+}
+ul li {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: 1px solid blue;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
